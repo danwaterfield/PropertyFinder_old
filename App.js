@@ -10,12 +10,11 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, NavigatorIOS,} from 'react-native';
 
-class SearchPage extends Component<{}> {}
+class SearchPage extends Component<{}>{
 
 export default class App extends Component<{}> {
-    render() {return <Text style={styles.description}>Search for houses to buy!</Text>;
-
-      return (
+  render() {
+    return (
       <NavigatorIOS
         style={styles.container}
         initialRoute={{
@@ -24,8 +23,11 @@ export default class App extends Component<{}> {
         }}/>
     );
   }
-}
+ } 
 
+export default class App extends Component<{}> {}
+render() {
+  return React.createElement(Text, {style: styles.description}, "Search for houses to buy!");}
 
 const styles = StyleSheet.create({
   description: {
@@ -36,6 +38,6 @@ const styles = StyleSheet.create({
   },
   container: {
   flex: 1,
-},
-});
-
+  },
+}
+);
